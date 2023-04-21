@@ -1,0 +1,250 @@
+.container{
+    height: 100%;
+    width: 100%;
+    margin-top: 7rem;
+}
+
+.wrapper{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 125px;
+}
+
+/* left */
+.left{
+    width: 50%;
+    height: 100%;
+}
+
+.left > img{
+    height: 625px;
+    width: 625px;
+    object-fit: cover;
+    border: 5px solid black;
+}
+
+/* right */
+.right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: auto;
+    margin-top: 1.5rem;
+}
+
+.title{
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+    background-color: black;
+    color: rgb(168, 168, 168);
+    border: 5px solid rgb(105, 105, 105);
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.quantity{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 20px;
+}
+
+.quantity > button{
+    padding: 0.5rem 1rem;
+    border: 2px solid #000000;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #aaa8a8;
+}
+
+.quantity > button:disabled{
+    background-color: #000000;
+    color: #ffffff;
+    cursor: not-allowed;
+}
+
+.quantity > .quantityNumber{
+    padding: 0;
+    border: none;
+    cursor: default;
+}
+
+.quantity > button:hover{
+    background-color: #8d8d8d;
+}
+
+.productDesc{
+    margin-top: 40px;
+}
+
+.productDesc > div{
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.productDesc > p{
+    color: #555;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.category{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 30px 0;
+}
+
+.category > h3{
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.category > .categoryName{
+    padding: 0.5rem 1.5rem;
+    background-color: #f00;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.category > .categoryName:hover{
+    border-color: #f00;
+    background-color: #fff;
+    color: #f00;
+
+}
+
+.price{
+    font-size: 28px;
+    color: rgb(0, 0, 0);
+    border: 5px solid rgb(90, 90, 90);
+    padding: 5px;
+    border-radius: 50px;
+}
+
+.price > span{
+    font-size: 24px;
+}
+
+.addToCart{
+    outline: none;
+    border: 1px solid transparent;
+    padding: 0.5rem 1.5rem;
+    margin-top: 2rem;
+    background-color: rgb(0, 0, 0);
+    color: #cdcdcd;
+    border-radius: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.addToCart:hover{
+    border-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    background-color: #fff;
+}  
+/* for screens smaller than 768px */
+@media (max-width: 767px) {
+    .wrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .left > img {
+        height: 300px;
+        width: 100%;
+        object-fit:fill;
+    }
+    
+    .right {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .category {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .category > h3 {
+        font-size: 22px;
+    }
+    
+    .category > .categoryName {
+        padding: 0.3rem 1rem;
+        font-size: 16px;
+    }
+    
+    .price {
+        font-size: 24px;
+    }
+    
+    .addToCart {
+        font-size: 18px;
+        padding: 0.3rem 1rem;
+        gap: 5px;
+    }
+}
+
+/* for screens larger than 768px */
+@media (min-width: 768px) {
+    .wrapper {
+        gap: 125px;
+    }
+    
+    .left > img {
+        height: 625px;
+        width: 625px;
+    }
+    
+    .right {
+        width: 50%;
+        margin-top: 1.5rem;
+    }
+    
+    .category {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+        margin: 30px 0;
+    }
+    
+    .category > h3 {
+        font-size: 26px;
+    }
+    
+    .category > .categoryName {
+        padding: 0.5rem 1.5rem;
+        font-size: 18px;
+    }
+    
+    .price {
+        font-size: 28px;
+    }
+    
+    .addToCart {
+        font-size: 20px;
+        padding: 0.5rem 1.5rem;
+        gap: 10px;
+    }
+}

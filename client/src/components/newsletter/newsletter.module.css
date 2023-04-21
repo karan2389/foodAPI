@@ -1,0 +1,164 @@
+.container{
+    height: 500px;
+    width: 100%;
+    /* margin: 8.5rem 0;
+    padding-top: 8rem; */
+    background-image: url("../../assets/food.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.subtitle{
+    margin-bottom: 12px;
+    font-size: 18px;
+    color: white;
+}
+
+.title{
+    margin-bottom: 32px;
+    font-size: 40px;
+    background-color: transparent;
+    border: 3px solid  rgb(255, 250, 250);
+    border-radius: 20px;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.inputContainer{
+    width: 500px;
+    height: 70px;
+    border: 1px solid #fff9f9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    border-radius: 20px;
+}
+
+.inputContainer > input{
+    outline: none;
+    border: none;
+    width: 90%;
+    padding: 1rem 0;
+    transition: 150ms all;
+    background-color: transparent;
+}
+
+.inputContainer>input::placeholder{
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.inputContainer > input:focus{
+    padding-left: 0.75rem;
+}
+
+.inputContainer:focus-within{
+    border-color: #333;
+}
+
+.sendIcon{
+    font-size: 22px;
+}
+
+.illustration{
+    height: 300px;
+    margin-top: 2.5rem;
+}
+/* For screens up to 768px */
+@media (max-width: 768px) {
+
+    .container{
+        height: auto;
+        padding-top: 4rem;
+        margin: 4rem 0;
+    }
+
+    .wrapper{
+        width: 90%;
+    }
+
+    .title{
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+
+    .subtitle{
+        font-size: 16px;
+    }
+
+    .inputContainer{
+        width: 100%;
+        height: 60px;
+        margin-bottom: 24px;
+    }
+
+    .inputContainer > input{
+        width: 85%;
+        font-size: 16px;
+    }
+
+    .sendIcon{
+        font-size: 18px;
+    }
+
+    .illustration{
+        height: 200px;
+        margin-top: 2rem;
+    }
+
+}
+
+/* For screens above 768px */
+@media (min-width: 769px) {
+
+    .container{
+        height: 500px;
+        margin: 8.5rem 0;
+        padding-top: 8rem;
+    }
+
+    .wrapper{
+        width: 100%;
+    }
+
+    .title{
+        font-size: 40px;
+        margin-bottom: 32px;
+    }
+
+    .subtitle{
+        font-size: 18px;
+    }
+
+    .inputContainer{
+        width: 500px;
+        height: 70px;
+        margin-bottom: 32px;
+    }
+
+    .inputContainer > input{
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .sendIcon{
+        font-size: 22px;
+    }
+
+    .illustration{
+        height: 300px;
+        margin-top: 2.5rem;
+    }
+
+}

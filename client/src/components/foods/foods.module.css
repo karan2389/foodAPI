@@ -1,0 +1,131 @@
+.container{
+    height: 100%;
+    width: 100%;
+    margin: 5rem 0;
+    margin-top: 7.5rem;
+    padding-top: 5rem;
+    background-color: #666;
+    font-family: cursive;
+}
+
+.wrapper{
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.subtitle{
+    text-align: center;
+    font-size: 25px;
+    color: #666;
+    font-weight: 300;
+    margin-bottom: 16px;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 40px;
+    color: rgb(169, 168, 164);
+    font-size: 36px;
+    font-weight: bold;
+    font-family:monospace;
+    background-color: rgb(14, 14, 10);
+    border: 2px solid rgb(210, 192, 159);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.foods{
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.food{
+    text-decoration: none;
+    color: inherit;
+}
+
+.food > h4{
+    text-align: center;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 26px;
+    color: rgb(169, 168, 164);
+    border-radius: 20px;
+    padding: 5px;
+    margin-bottom: 12px;
+    text-transform: capitalize;
+    font-family: cursive;
+    background-color: rgb(14, 14, 10);
+    border: 2px solid rgb(210, 192, 159);
+    transition: 150ms all;
+}
+.food > h4:hover {
+    background-color: rgb(102, 88, 72);
+    color: black;
+    border-color: rgb(0, 0, 0);
+}
+
+.imgContainer{
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+}
+
+.imgContainer > img{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 250ms all ease-in-out;
+}
+
+.imgContainer > img:hover{
+    scale: 1.1;
+}
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 90%;
+    }
+    .title {
+        font-size: 30px;
+    }
+    .food > h4 {
+        font-size: 20px;
+    }
+    .imgContainer {
+        height: 200px;
+        width: 200px;
+    }
+    .imgContainer > img:hover {
+        scale: 1.05;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .wrapper {
+        width: 95%;
+    }
+    .subtitle {
+        font-size: 20px;
+    }
+    .title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        padding: 8px;
+    }
+    .foods {
+        flex-direction: column;
+    }
+    .food > h4 {
+        font-size: 18px;
+        padding: 2px;
+        margin-bottom: 8px;
+    }
+}
